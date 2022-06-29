@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="31577e45-7c9a-4130-83bf-be559fa2b824" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../py/temp/hw.html" beforeDir="false" afterPath="$PROJECT_DIR$/../py/temp/hw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyside6/cc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyside6/qtimer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pyside6/qtimer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyt/python.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pyt/python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyt/ttk.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pyt/ttk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyt/www.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pyt/www.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2BFoh0Iu5j32rfAFfOELjUlsKuT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31577e45-7c9a-4130-83bf-be559fa2b824" name="Changes" comment="" />
+      <created>1656511311500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656511311500</updated>
+    </task>
+    <servers />
+  </component>
+</project>

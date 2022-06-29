@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
+
 class StopWatchWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -81,6 +82,7 @@ class StopWatchWindow(QMainWindow):
 app = QApplication(sys.argv)
 stopWt = StopWatchWindow()
 app.exec()
+
 
 
 
