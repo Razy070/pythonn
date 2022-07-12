@@ -8,7 +8,7 @@ from openpyxl.styles import Font
 # записываем в исходный файл (можно исходный файл удалять)
 
 
-workbook = openpyxl.load_workbook("""temp/sample_example.xlsx""")
+workbook = openpyxl.load_workbook("""test1.xlsx""")
 
 # берём активную страницу из рабочей книги
 worksheet = workbook.active
@@ -88,7 +88,7 @@ for row in range(0, function_len_array(external_array)):  # [0, 1, 2, 3, 4, ...,
 # worksheet_new['E1'].font = Font(bold=True)
 
 
-workbook.save('temp/sample_example_new.xlsx')
+workbook.save('sssample_example_new.xlsx')
 
 wb = Workbook()
 ws = wb.active

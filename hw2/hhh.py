@@ -5,17 +5,29 @@ import openpyxl
 from openpyxl import Workbook
 from openpyxl.utils import get_column_interval
 
-file_name = "samplel.xlsx"
+file_name = "test1.xlsx"
 
 workbook = openpyxl.load_workbook(file_name)
 worksheet = workbook.active
-max_row = worksheet.max_row + 1
-print(max_row)
-print(type(max_row))
-max_column = worksheet.max_column + 1
-print(max_column)
-print(type(max_column))
-index = 0
+
+rows = worksheet.max_row
+cols = worksheet.max_column
+
+
+for i in range(1, rows + 1):
+    string = ''
+    for j in range(1, cols + 1):
+        cell = worksheet.cell(row = i, column = j)
+        string = string + str(cell.value) + ' '
+    print(string)
+
+
+
+
+
+
+
+
 
 
 

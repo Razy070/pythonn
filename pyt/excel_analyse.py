@@ -18,7 +18,7 @@ def get_result():
     print(f'элемент: {elem_from_user}')
     ############################################################
 
-    file_name = 'temp/sample_example_new.xlsx'
+    file_name = 'test1.xlsx'
     workbook = openpyxl.load_workbook(file_name)
 
     # берём активную страницу из рабочей книги
