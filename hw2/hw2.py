@@ -1,19 +1,10 @@
-import openpyxl
+import os
 
-book = openpyxl.load_workbook("test1.xlsx")
-sheet = book.active
+from django.core.wsgi import get_wsgi_application
 
-global_rows = []
-for row in range(1, sheet.max_row + 1):
-    local_row = []
-    for column in range(1, sheet.max_column + 1):
-        local_row.append(sheet.cell(row=row, column=column).value)
-    global_rows.append(local_row)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "shop.settings")
 
-for i in global_rows:
-    print(i)
-
-
+application = get_wsgi_application()
 
 
 
