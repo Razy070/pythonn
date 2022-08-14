@@ -3,7 +3,8 @@ text1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu magn
         "Donec interdum tempus ligula non vulputate. Cras mollis rhoncus facilisis. Fusce at viverra magna, id tempor " \
         "nulla. Quisque at felis eget arcu gravida efficitur eget ac enim. Etiam quisque efficitur lorem at lorem " \
         "dictum, a sagittis ipsum pulvinar. Maecenas elit nisi, iaculis a dolor id, tempor molestie dolor. Pellentesque" \
-        " aliquet non orci at convallis. Donec laoreet nisl quam. Ut accumsan, dui ut mattis ultricies, est nulla semper" \
+        "aliquet non orci at convallis. Donec laoreet nisl quam. Ut accumsan, dui ut mattis ultricies, est nulla " \
+        "semper" \
         " est, eget pulvinar magna lacus ut risus. " \
         "Duis sed hendrerit odio. Etiam scelerisque nunc quis placerat interdum. Nam condimentum enim ac justo " \
         "fermentum, et imperdiet purus finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris " \
@@ -26,7 +27,7 @@ find4 = text2.find(str1, 1563)
 arr1 = [x for x in text1]
 
 for i in arr1:
-        print(ord(i))
+    print(ord(i))
 
 arr1.sort(reverse=True)
 print(arr1)
