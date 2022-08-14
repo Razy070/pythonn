@@ -1,6 +1,6 @@
 list1 = [1, 2, 3, 4, 5, 6]
 print(list1)
-list1.sort(reverse=True) # сортировка в обратном порядке
+list1.sort(reverse=True)
 print(list1)
 
 str3 = "dasjduajnfuyanfya1224sdkfvuis"
