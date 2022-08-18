@@ -12,7 +12,7 @@ response = requests.get(url=url, headers=headers)
 status = response.status_code
 content = response.json()
 
-######################################################
+##
 conn = psycopg2.connect(dbname='new1_postgres_db', user='postgres1', password='R29062011', host='localhost')
 cursor = conn.cursor()
 for i in content:
@@ -25,7 +25,7 @@ for i in content:
 conn.commit()
 cursor.close()
 conn.close()
-######################################################
+##
 conn = psycopg2.connect(dbname='new1_postgres_db', user='postgres1', password='R29062011', host='localhost')
 cursor = conn.cursor()
 cursor.execute("""SELECT * FROM public.new1_postgres_tb
@@ -36,7 +36,8 @@ records = cursor.fetchall()
 ...
 cursor.close()
 conn.close()
-#######################################################
+
+##
 workbook = Workbook()
 worksheet = workbook.active
 for i in records:
