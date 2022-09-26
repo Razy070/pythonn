@@ -1,0 +1,71 @@
+.button{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #232323;
+}
+
+.button span{
+    position: relative;
+}
+
+.button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: greenyellow;
+    transition: .3s ease;
+}
+
+.button:hover::before{
+    width: 100%;
+}
+
+
+
+.button_scnd{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    color: #383d48;
+}
+
+.button_scnd span{
+    display: block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    line-height: 1;
+    transition: .4s ease;
+}
+
+.button_scnd:after {
+    content: "SSS";
+    font-style: none;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+}
+
+.button_scnd:hover span{
+    max-width: 150px;
+    opacity: 1;
+    margin-right: 6px;
+}
