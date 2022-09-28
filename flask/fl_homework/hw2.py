@@ -1,11 +1,12 @@
+import random
+
 from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello_world():
-    text = ""
-    for i in range(1, 667):
-        text += f"<p>{i}</p>"
-    return text
+@app.route('/', methods=['GET'])
+def get_index():
+    rand = random.randint(1, 667)
+    return f"<h1>{rand}</h1>"
+
