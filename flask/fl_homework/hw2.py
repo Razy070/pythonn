@@ -10,3 +10,6 @@ def get_index():
     rand = random.randint(1, 667)
     return f"<h1>{rand}</h1>"
 
+
+if __name__ == "__main__":
+    app.run(threaded=True, port=5000)
