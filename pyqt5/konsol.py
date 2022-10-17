@@ -28,7 +28,7 @@ class App(QWidget):
 
     @pyqtSlot()
     def on_click(self):
-        print('PyQt5 button click')
+        print('button click')
 
 
 if __name__ == '__main__':

@@ -7,12 +7,11 @@ from bs4 import BeautifulSoup
 import sys
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLineEdit, QLabel
 
-
-
 url = "https://myfin.by/converter.html"
 
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                          'Chrome/102.0.0.0 Safari/537.36'}
+
 
 def get_course():
     global course_usd
@@ -26,13 +25,14 @@ def get_course():
         status = response.status_code
         if status == 200:
             content = response.content
-            with open("py/temp/hw.html", "wb") as file:
+            with open("py/temp/hw7.html", "wb") as file:
                 file.write(content)
             soup = BeautifulSoup(response.text, "lxml")
 
             data = soup.findAll("input", class_="input_calc form-control form-input-sum bestmb")
             new_data = str(data).split(sep='inputmode="decimal" type="tel" value="')
-            new_data = str(new_data).split(sep='<input class="input_calc form-control form-input-sum bestmb" id="bestmb_')
+            new_data = str(new_data).split(
+                sep='<input class="input_calc form-control form-input-sum bestmb" id="bestmb_')
 
             dollar1 = new_data[1].split("""', '""")[0].split('"')[0]
             dollar2 = new_data[1].split("""usd" ', '""")[1].split('"/>')[0]
@@ -103,6 +103,8 @@ def get_course():
         if new_today % 10 != 0:
             time.sleep(10)
         print("obnovlen")
+
+
 Thread(target=get_course).start()
 
 
@@ -142,27 +144,26 @@ class MainWindow(QWidget):
     def line_edit_text_changed(self, text):
         text = course_eur * float(text)
         self.label.setText("Ваша сумма: " + str(text) + " EUR")
+
     def line_edit_text_changed1(self, text1):
         text1 = course_rub * float(text1)
         self.label1.setText("Ваша сумма: " + str(text1) + " RUB")
+
     def line_edit_text_changed2(self, text2):
         text2 = course_cny * float(text2)
         self.label2.setText("Ваша сумма: " + str(text2) + " CNY")
+
     def line_edit_text_changed3(self, text3):
         text3 = course_gbp * float(text3)
         self.label3.setText("Ваша сумма: " + str(text3) + " GBP")
+
     def line_edit_text_changed4(self, text4):
         text4 = course_pln * float(text4)
         self.label4.setText("Ваша сумма: " + str(text4) + " PLN")
 
+
 app = QApplication(sys.argv)
 mw = MainWindow()
 app.exec()
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    sys.exit(app.exec())

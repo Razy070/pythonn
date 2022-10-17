@@ -11,6 +11,7 @@ class Window(QWidget):
         self.lcd = QLCDNumber()
         self.button = QPushButton("Start")
         self.button.clicked.connect(self.timerStart)
+        self.buttonStop = QPushButton("Stop")
         self.buttonReset = QPushButton("Reset")
         self.buttonReset.clicked.connect(self.timerReset)
         self.spinBox = QSpinBox()

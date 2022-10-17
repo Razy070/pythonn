@@ -10,7 +10,7 @@ class Example(QWidget):
         self.initUI()
 
     def initUI(self):
-        cb = QCheckBox('Show title', self)
+        cb = QCheckBox('Запустить цикл', self)
         cb.move(20, 20)
         cb.toggle()
         cb.stateChanged.connect(self.changeTitle)
@@ -24,6 +24,10 @@ class Example(QWidget):
             self.setWindowTitle('QCheckBox')
         else:
             self.setWindowTitle('')
+
+    def on_click(self):
+        for i in range(1, 51):
+            print(i)
 
 
 if __name__ == '__main__':

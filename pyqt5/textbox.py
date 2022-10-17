@@ -2,13 +2,28 @@ import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
+import psycopg2
+
+conn = psycopg2.connect(dbname='new_db', user='postgres', password='R29062011Z', host='localhost')
+cursor = conn.cursor()
+cursor.execute("""
+SELECT * FROM public.books
+ORDER BY id ASC, title ASC, author ASC, price ASC, "pageCounts" ASC 
+""")
+records = cursor.fetchall()
+print(records)
+print(type(records))
+
+...
+cursor.close()
+conn.close()
 
 
 class App(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.title = 'PyQt5 textbox - pythonspot.com'
+        self.title = 'PyQt6'
         self.left = 10
         self.top = 10
         self.width = 400
@@ -35,9 +50,10 @@ class App(QMainWindow):
     @pyqtSlot()
     def on_click(self):
         textboxValue = self.textbox.text()
-        QMessageBox.question(self, 'Message - pythonspot.com', "You typed: " + textboxValue, QMessageBox.Ok,
-                             QMessageBox.Ok)
+        # print(textboxValue)
         self.textbox.setText("")
+        # for i in range(1, textboxValue):
+        #     print(i)
 
 
 if __name__ == '__main__':
