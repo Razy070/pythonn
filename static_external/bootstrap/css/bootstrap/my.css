@@ -1,0 +1,8 @@
+button {
+  border-radius: 0;
+  color: red;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
